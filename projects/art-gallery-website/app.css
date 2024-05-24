@@ -1,0 +1,250 @@
+/* 
+
+  ##Device = Desktop, Laptop
+  ##Screen = min 1280px
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
+
+@media (min-width: 1024px){
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light dark;
+}
+
+body {
+  font-family: "Big Shoulders Display";
+  background-color: var(--background-color-1); /* #fff*/
+  width: 100%;
+  min-height: 100vh;
+}
+:root {
+  --text-size: 16px;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color-1: #fff;
+    --text-color: #000;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color-1: #000;
+    --text-color: #fff;
+  }
+}
+
+.contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain > c.image {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-image::before {
+  content: " ";
+  display: inline-block;
+  width: 600px;
+  height: 800px;
+  background-color: #151515;
+  margin-right: -10px;
+}
+
+.c-image::after {
+  content: " ";
+  display: inline-block;
+  width: 600px;
+  height: 800px;
+  background-color: #ffffff;
+}
+
+.c-title {
+  position: absolute;
+  top: 25%;
+  left: 21%;
+  color: #fff;
+  font-size: 96px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 800;
+  mix-blend-mode: difference;
+}
+
+.c-paragraph {
+  font-family: "Outfit", sans-serif;
+   position: absolute;
+  top: 25%;
+  right: 25%;
+  color: #151515;
+  font-size: 20px;
+  font-weight: 300;
+  width: 250px;
+  height: 350px;
+}
+
+.c-btn {
+   position: absolute;
+  top: 48%;
+  right: 24%;
+
+}
+
+.c-btn > a {
+   color: white;
+  background: #151515;
+  padding: 20px 0px 20px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.c-btn > a::after {
+  content: " 〉";
+  color: white;
+  background-color: #d5966c;
+  padding: 20px 20px 20px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+
+.c-btn > a:hover {
+  color: #151515;
+  background: #d5966c;
+}
+
+.c-btn > a:hover::after {
+  color:#d5966c;
+  background-color: #151515;
+}
+
+/*
+Grid-part
+*/
+
+.grid {
+  width: 1110px;
+  height: 1150px;
+}
+
+.item01 {
+  grid-area: number1;
+  width: 440px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item01 > h1 {
+  font-size: 55px;
+  font-weight: 800;
+  text-transform: uppercase;
+  width: 60%;
+}
+
+.item01 > p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 200;
+  width: 50%;
+}
+
+.item02 {
+  grid-area: number2;
+  width: 635px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.item03 {
+  grid-area: number3;
+  width: 635px;
+  height: 710px;
+  overflow: hidden;
+}
+
+.item04 {
+  grid-area: number4;
+  width: 445px;
+  height: 313px;
+  overflow: hidden;
+}
+
+.item05 {
+  grid-area: number5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #151515;
+  color: #fff;
+  width: 445px;
+  height: 377px;
+}
+
+.item05 > h1 {
+  font-size: 55px;
+  font-weight: 800;
+  text-transform: uppercase;
+  width: 80%;
+}
+
+.item05 > p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 200;
+  width: 80%;
+}
+
+.grid-items > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas: 
+      "number1 number2 number2 number2"
+      "number3 number3 number4 number4"
+      "number3 number3 number5 number5";
+  gap: 20px;
+  margin: 50px 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  font-family: "Outfit", sans-serif;
+  font-weight: 200;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #151515;
+  color: #fff;
+  padding: 35px 35px;
+  
+}
+
+.footer-text {
+  width: 20%;
+}
+}

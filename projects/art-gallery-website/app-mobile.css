@@ -1,0 +1,177 @@
+/* 
+
+  ##Device = Mobile
+  ##Screen = max 600px
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
+
+@media only screen and (max-width: 600px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Big Shoulders Display";
+  }
+
+  .contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .c-image > img {
+    object-fit: cover;
+    width: 500px;
+    height: 371px;
+  }
+
+  .c-title {
+    color: #151515;
+    font-size: 55px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+    margin-top: 35px;
+    margin-left: 15px;
+  }
+
+  .c-paragraph {
+    font-family: "Outfit", sans-serif;
+    color: #151515;
+    font-size: 20px;
+    font-weight: 200;
+    width: 70%;
+    margin: 35px 0px 0px 15px;
+  }
+
+  .c-btn {
+    margin: 50px 0px 0px 15px;
+  }
+
+  .c-btn > a {
+    color: white;
+    background: #151515;
+    padding: 20px 0px 20px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .c-btn > a::after {
+    content: " 〉";
+    color: white;
+    background-color: #d5966c;
+    padding: 20px 20px 20px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 5px;
+  }
+
+  .c-btn > a:hover {
+    color: #151515;
+    background: #d5966c;
+  }
+
+  .c-btn > a:hover::after {
+    color: #d5966c;
+    background-color: #151515;
+  }
+
+  /*
+Grid-part
+*/
+  .item01 {
+    order: 2;
+  }
+
+  .item02 {
+    order: 1;
+  }
+
+  .item03 {
+    order: 3;
+  }
+
+  .item04 {
+    order: 4;
+  }
+
+  .item05 {
+    order: 5;
+  }
+
+
+
+  .item02 > img {
+    width: 480px;
+    height: 480px;
+    object-fit: cover;
+  }
+
+ .item03 > img {
+    width: 100%;
+    height: auto;
+    
+  }
+
+ .item04 > img {
+    width: 480px;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .item05 {
+    background-color: #151515;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 50px;
+}
+
+  .item05 > h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 55px;
+    letter-spacing: 1px;
+    
+  }
+
+  .item05 > p {
+    font-family:"Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: #fff;
+    width: 70%;
+  }
+
+  .grid {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+    margin-bottom: 150px;
+  }
+
+  footer {
+    font-family: "Outfit", sans-serif;
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #151515;
+    color: #fff;
+    padding: 80px 80px;
+  }
+
+  .footer-text {
+    margin: 35px 0px;
+  }
+}

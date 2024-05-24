@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.section {
+  width: 100%;
+  height: 100vh;
+}
+
+/* align item center on both axis (x,y) */
+.section-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+
+/* align content center on both axis (x,y) */
+.item-section-1 {
+  display: grid;
+  place-items: center;
+}
+
+/* grid: 2x2 (4 cells) rows: 2x 50vh
+columns: 2x 50%(1fr=50%)*/
+.section-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 50vh);
+}
+
+/*
+grid: 1x2(2cells)
+rows: 1x 80%(image),1 max-content(height of heading)
+columns:1x auto
+gap:30px(distance between image and heading)*/
+.section-2 .item {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 80% max-content;
+  gap: 30px;
+}
+
+.section-2 .item img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.section-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.section-3 .item:nth-child(2) {
+    background-color: brown;
+    display: grid;
+    place-content: end end;
+}
+
+.section-3 .item {
+    border: 1px solid grey;
+}
+
+.section-4 {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    grid-template-areas:
+    "a a a a a a b b b b b c c c c c c"
+    "a a a a a a b b b b b c c c c c c"
+    "a a a a a a b b b b b c c c c c c"
+    "a a a a a a b b b b b c c c c c c"
+    "a a a a a a b b b b b c c c c c c"
+    "a a a a a a b b b b b c c c c c c"
+    "a a a a a a b b b b b c c c c c c"
+    /* The dot is a dead zone */
+    /* ". . . . . . . . . . . . . . . . ." */
+    "d d d d d d d d d d e e e e e e e"
+    "d d d d d d d d d d e e e e e e e"
+    "d d d d d d d d d d e e e e e e e"
+    "d d d d d d d d d d e e e e e e e"
+    "d d d d d d d d d d e e e e e e e"
+    "d d d d d d d d d d e e e e e e e"
+    "d d d d d d d d d d e e e e e e e"
+    /* ". . . . . . . . . . . . . . . . ." */
+    "g g g g g g g f f f f f f f f f f"
+    "g g g g g g g f f f f f f f f f f"
+    "g g g g g g g f f f f f f f f f f"
+    "g g g g g g g f f f f f f f f f f"
+    "g g g g g g g f f f f f f f f f f"
+    "g g g g g g g f f f f f f f f f f";
+}
+
+.section-4 .item:nth-child(1) {
+  background-color: red;
+  grid-area: a;
+}
+
+.section-4 .item:nth-child(2) {
+  background-color: blue;
+  grid-area: b;
+}
+
+.section-4 .item:nth-child(3) {
+  background-color: green;
+  grid-area: c;
+}
+
+.section-4 .item:nth-child(4) {
+  background-color: pink;
+  grid-area: d;
+}
+
+.section-4 .item:nth-child(5) {
+  background-color: cyan;
+  grid-area: e;
+}
+
+.section-4 .item:nth-child(6) {
+  background-color: orange;
+  grid-area: f;
+}
+
+.section-4 .item:nth-child(7) {
+  background-color: forestgreen;
+  grid-area: g;
+}
+
